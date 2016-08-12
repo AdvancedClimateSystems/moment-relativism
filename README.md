@@ -67,6 +67,9 @@ Notation   | Result
 `now-1d`   | Subtract one day from now
 `now+1d/d` | Add one day to now, round up to end of day
 `now-1d\d` | Subtract one day from now, round down to start of day
+`now`      | Just returns the date corresponding to now
+`now/d`    | Rounds up to todays end of day.
+`now\d`    | Rounds down to todays start of day.
 
 
 License
