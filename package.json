@@ -1,6 +1,6 @@
 {
   "name": "moment-relativism",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Parse grafana-inspired relative date notation into Momentjs.",
   "main": "./lib/moment-relativism.js",
   "repository": {
