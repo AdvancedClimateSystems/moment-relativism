@@ -53,7 +53,7 @@ rounding up or rounding down. Instead the rounding character `/` is rounded up
 or down based on the context the string is used in. If the string is used as a
 "from" date in a date range, it rounds down. Otherwise it rounds down.
 
-`moment-relativism` differs here, as it adds a `\` character for rounding
+`moment-relativism` differs here, as it adds a `|` character for rounding
 down. `/` is always used for rounding up.
 
 When adding, subtracting and rounding you can use `moment`'s shorthand keys
@@ -66,10 +66,10 @@ Notation   | Result
 `now+1d`   | Add one day to now
 `now-1d`   | Subtract one day from now
 `now+1d/d` | Add one day to now, round up to end of day
-`now-1d\d` | Subtract one day from now, round down to start of day
+`now-1d|d` | Subtract one day from now, round down to start of day
 `now`      | Just returns the date corresponding to now
 `now/d`    | Rounds up to todays end of day.
-`now\d`    | Rounds down to todays start of day.
+`now|d`    | Rounds down to todays start of day.
 
 
 License

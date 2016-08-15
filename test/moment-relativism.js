@@ -163,7 +163,7 @@ describe('moment-relativism', () => {
     describe('rounding', () => {
         describe('now', () => {
             it('should floor without subtraction or addition', () => {
-                let result = moment.relativism('now\\d');
+                let result = moment.relativism('now|d');
                 let expected = moment().startOf('d');
                 assert.equal(result.unix(), expected.unix());
             });
@@ -177,7 +177,7 @@ describe('moment-relativism', () => {
 
         describe('seconds', () => {
             it('should floor to the nearest second', () => {
-                let result = moment.relativism('now-1d\\s');
+                let result = moment.relativism('now-1d|s');
                 let expected = moment().subtract(1, 'd').startOf('s');
                 assert.equal(result.unix(), expected.unix());
             });
@@ -191,7 +191,7 @@ describe('moment-relativism', () => {
 
         describe('minutes', () => {
             it('should floor to the nearest minute', () => {
-                let result = moment.relativism('now-1d\\m');
+                let result = moment.relativism('now-1d|m');
                 let expected = moment().subtract(1, 'd').startOf('m');
                 assert.equal(result.unix(), expected.unix());
             });
@@ -205,7 +205,7 @@ describe('moment-relativism', () => {
 
         describe('hours', () => {
             it('should floor to the nearest hour', () => {
-                let result = moment.relativism('now-1d\\h');
+                let result = moment.relativism('now-1d|h');
                 let expected = moment().subtract(1, 'd').startOf('h');
                 assert.equal(result.unix(), expected.unix());
             });
@@ -219,7 +219,7 @@ describe('moment-relativism', () => {
 
         describe('days', () => {
             it('should floor to the nearest day', () => {
-                let result = moment.relativism('now-1d\\d');
+                let result = moment.relativism('now-1d|d');
                 let expected = moment().subtract(1, 'd').startOf('d');
                 assert.equal(result.unix(), expected.unix());
             });
@@ -233,7 +233,7 @@ describe('moment-relativism', () => {
 
         describe('weeks', () => {
             it('should floor to the nearest week', () => {
-                let result = moment.relativism('now-1d\\w');
+                let result = moment.relativism('now-1d|w');
                 let expected = moment().subtract(1, 'd').startOf('w');
                 assert.equal(result.unix(), expected.unix());
             });
@@ -247,7 +247,7 @@ describe('moment-relativism', () => {
 
         describe('months', () => {
             it('should floor to the nearest month', () => {
-                let result = moment.relativism('now-1M\\M');
+                let result = moment.relativism('now-1M|M');
                 let expected = moment().subtract(1, 'M').startOf('M');
                 assert.equal(result.unix(), expected.unix());
             });
@@ -261,7 +261,7 @@ describe('moment-relativism', () => {
 
         describe('quarters', () => {
             it('should floor to the nearest quarter', () => {
-                let result = moment.relativism('now-1M\\Q');
+                let result = moment.relativism('now-1M|Q');
                 let expected = moment().subtract(1, 'M').startOf('Q');
                 assert.equal(result.unix(), expected.unix());
             });
@@ -275,7 +275,7 @@ describe('moment-relativism', () => {
 
         describe('years', () => {
             it('should floor to the nearest year', () => {
-                let result = moment.relativism('now-1M\\y');
+                let result = moment.relativism('now-1M|y');
                 let expected = moment().subtract(1, 'M').startOf('y');
                 assert.equal(result.unix(), expected.unix());
             });
